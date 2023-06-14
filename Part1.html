@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Link Fontawesome -->
+
+    <link href="assets/fontawesome/fontawesome-free-6.1.2-web/css/all.css" rel="stylesheet">
+
+    <style>
+        .invoice-header {
+            display: inline-flex;
+        }
+
+        .in-row-heading h2 {
+            background: #21bb49;
+            width: 1172px;
+            padding: 10px;
+            margin-top: 40px;
+            color: #ffff;
+            font-size: 28px;
+            padding-left: 50px;
+            letter-spacing: 10px;
+        }
+
+        .in-row-logo {
+            width: 100%;
+            height: auto;
+            position: absolute;
+            top: -35px;
+            left: -40px;
+        }
+
+        .in-row-logo img {
+            width: 100%;
+            height: auto;
+            float: right;
+            max-width: 100px;
+        }
+
+        .invoice-hea {
+            position: relative;
+            margin: 0px 50px;
+        }
+
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        td,
+        th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+
+        .ta-1 tr:nth-child(even),
+        .ta-2 tr:nth-child(even) {
+            background-color: #00ff3469;
+        }
+
+        .invoice-c-table {
+            display: flex;
+            padding: 50px 150px;
+        }
+
+        table.ta-1,
+        table.ta-2 {
+            margin: 10px 15px;
+        }
+
+        .ta-1 th,
+        .ta-2 th {
+            background: #c3c3c3;
+        }
+
+        table.ta-3 td {
+            border: none;
+        }
+
+        section.secont-sec {
+            padding: 50px 165px;
+        }
+
+
+        .ta-3 td {
+            padding: 13px 20px;
+        }
+
+        .ta-3 td:nth-child(odd) {
+            background-color: red;
+        }
+
+        .row.se-se {
+            display: flex;
+        }
+
+        .row.se-se {
+            width: 100%;
+        }
+
+        section.secont-sec .col {
+            width: 25%;
+            padding: 20px 0px;
+            border: 1px solid #ddd3d3;
+            text-align: center;
+        }
+
+        .col.col-color {
+            background: #21bb49;
+        }
+
+        .col.col-color.bo-radi {
+            border-top-left-radius: 25px;
+        }
+
+        .col.col-color.bo-radis {
+            border-bottom-left-radius: 25px;
+        }
+
+        .col.bo-radi1 {
+            border-top-right-radius: 25px;
+        }
+
+
+        .col.bo-radis1 {
+            border-bottom-right-radius: 25px;
+        }
+
+        .col.col-color.bo-rad3 {
+            border-bottom-left-radius: 25px;
+        }
+
+        .section-break {
+            border: 1px dashed #00cd00;
+            margin: 0px 51px;
+        }
+
+        section.Invoice-table-details {
+            width: 100%;
+        }
+
+        .row.in-table-row {
+            display: flex;
+        }
+
+        .col-1 {
+            width: 40%;
+        }
+
+        .col-2 {
+            width: 20%;
+            color: #21bb49;
+            font-weight: 700;
+        }
+
+        .row.in-table-row:first-child {
+            margin: 50px;
+            color: #21bb49;
+            font-weight: 700;
+            font-size: 15px;
+            letter-spacing: 1px;
+        }
+
+        .row.in-table-row1 {
+            display: flex;
+            width: 100%;
+        }
+
+        .col-11 {
+            width: 40%;
+        }
+
+        .col-22 {
+            width: 20%;
+        }
+
+        .in-table-inner {
+            padding: 50px 150px;
+        }
+
+        tr.table-headers-color th {
+            font-size: 15px;
+            color: #21bb49;
+            letter-spacing: 1px;
+            border: none;
+        }
+
+        section.Invoice-table-details td,
+        section.Invoice-table-details th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+            border: none;
+        }
+
+        .in-table-inner td,
+        .in-table-inner th {
+            text-align: left !important;
+        }
+
+        th.th-right {
+            text-align: end !important;
+        }
+
+        td.td-right {
+            text-align: end !important;
+        }
+
+        .row.inv-row {
+            display: flex;
+            width: 100%;
+        }
+
+        .col-01 {
+            width: 40%;
+        }
+
+        .col-02 {
+            width: 40%;
+        }
+
+        section.invoice-last-table {
+            padding: 50px 150px;
+        }
+
+        p.hea.uni,
+        p.last-un {
+            text-align: end;
+        }
+
+        p.hea.uni-middle {
+            text-align: center;
+        }
+
+        p.uni-middle-p {
+            text-align: center;
+        }
+
+        section.invoice-last-table p.hea {
+            color: #21bb49;
+        }
+
+        .row.inv-row {
+            border-bottom: 1px solid #21bb49;
+        }
+
+        .row.inv-row:last-child {
+            border: none;
+        }
+
+        .row.inv-row:nth-child(5),
+        .row.inv-row:nth-child(6),
+        .row.inv-row:nth-child(7),
+        .row.inv-row:nth-child(9) {
+            border: none;
+        }
+
+        .row.inv-row:nth-child(10) {
+            border-bottom: 2px solid #21bb49;
+        }
+
+        .sign {
+            text-align: end;
+            padding: 0px 150px;
+        }
+
+        .row.foot-row {
+            display: flex;
+            width: 100%;
+        }
+
+        .col-001,
+        .col-002 {
+            width: 50%;
+            text-align: center;
+        }
+
+        .row.foot-row.te-cenetr p {
+            text-align: center;
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        @media screen and (max-width: 992px) {
+            .in-row-heading h2 {
+                width: 645px;
+            }
+
+            .invoice-c-table {
+                padding: 50px 70px;
+            }
+
+            section.secont-sec {
+                padding: 50px 90px;
+            }
+
+            section.invoice-last-table {
+                padding: 50px 90px;
+            }
+
+            .sign {
+                padding: 0px 90px;
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            .in-row-heading h2 {
+                width: 590px;
+            }
+
+            section.secont-sec {
+                padding: 50px 80px;
+            }
+
+            section.invoice-last-table {
+                padding: 50px 80px;
+            }
+
+            .sign {
+                padding: 0px 90px;
+            }
+        }
+
+        @media screen and (max-width: 576px) {
+            .invoice-hea {
+                position: relative;
+                margin: 0px 10px;
+            }
+
+            .in-row-heading h2 {
+                width: 280px;
+                font-size: 17px;
+            }
+
+            .in-row-logo {
+                top: -18px;
+                left: -13px;
+            }
+
+            .in-row-logo img {
+                max-width: 60px;
+            }
+
+            .invoice-c-table {
+                padding: 50px 10px;
+                display: block;
+                margin: 0 auto;
+            }
+
+            section.secont-sec {
+                padding: 30px 10px;
+            }
+
+            section.invoice-last-table {
+                padding: 0px 10px;
+            }
+
+            .invoice-c-table table.ta-1,
+            .invoice-c-table table.ta-2 {
+                margin: 0px 0px;
+            }
+
+            .sign {
+                padding: 52px 10px;
+            }
+        }
+
+        @media (min-width: 1500px) and (max-width: 1920px) {
+            .in-row-logo {
+                top: -35px;
+                right: 600px;
+            }
+
+            .in-row-heading h2 {
+                width: 1185px;
+            }
+
+            .in-row-logo {
+                top: -35px;
+                left: -600px !important;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <section class="full-invoice-content">
+        <!-- <div class="invoice-header"> -->
+
+        <div class="invoice-hea">
+            <div class="in-row-heading">
+                <h2>INVOICE</h2>
+            </div>
+
+            <div class="in-row-logo">
+                <img src="images/sonrich_logo.png" alt="">
+            </div>
+        </div>
+        <!-- </div> -->
+
+        <div class="invoice-c-table">
+            <table class="ta-1">
+                <tr>
+                    <th rowspan="2">Delivered by:</th>
+                    <th>Number: </th>
+                </tr>
+
+                <tr>
+                    <th>Date:</th>
+                </tr>
+                <tr>
+                    <td>Company Name:</td>
+                    <td>Sonrich Asia (pvt) ltd</td>
+                </tr>
+                <tr>
+                    <td>Company Address:</td>
+                    <td>No.02, Union Place, Colombo</td>
+                </tr>
+                <tr>
+                    <td>Phone No 1:</td>
+                    <td>0472224445</td>
+                </tr>
+                <tr>
+                    <td>Email Address:</td>
+                    <td>sonrich@gmail.com</td>
+                </tr>
+            </table>
+
+            <table class="ta-2">
+                <tr>
+                    <th rowspan="2">Deliverd to:</th>
+                    <th>Number:</th>
+
+                </tr>
+
+                <tr>
+                    <th>Date:</th>
+                </tr>
+
+                <tr>
+                    <td>Customer Name:</td>
+                    <td>AAA</td>
+                </tr>
+                <tr>
+                    <td>Customer Address:</td>
+                    <td>No.02, Wijerama, Nugegoda</td>
+                </tr>
+                <tr>
+                    <td>Phone No 1:</td>
+                    <td>0714856896</td>
+                </tr>
+                <tr>
+                    <td>Phone No 2:</td>
+                    <td>0784523456</td>
+                </tr>
+            </table>
+        </div>
+    </section>
+
+    <div class="section-break"></div>
+
+    <section class="secont-sec">
+        <div class="ta-3-border-radius">
+            <div class="row se-se">
+                <div class="col col-color bo-radi">
+                    <strong>Invoice No:</strong>
+                </div>
+                <div class="col">
+                    10500
+                </div>
+                <div class="col col-color">
+                    <strong>Order No:</strong>
+                </div>
+                <div class="col bo-radi1">
+                    E1658
+                </div>
+            </div>
+
+            <div class="row se-se">
+                <div class="col col-color bo-rad3">
+                    <strong>Invoice No:</strong>
+                </div>
+                <div class="col bo-radis2">
+                    10500
+                </div>
+                <div class="col col-color">
+                    <strong>Order No:</strong>
+                </div>
+                <div class="col bo-radis1">
+                    E1658
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+
+    <section class="invoice-last-table">
+        <div class="tn-ta">
+            <div class="row inv-row">
+                <div class="col-01">
+                    <p class="hea"><strong>DESCRIPTION</strong></p>
+                    <p>Product 01</p>
+                </div>
+                <div class="col-02">
+                    <p class="hea uni-middle"><strong>RATE</strong></p>
+                    <p class="uni-middle-p">Rs.10000</p>
+                </div>
+                <div class="col-02">
+                    <p class="hea uni-middle"><strong>QTY</strong></p>
+                    <p class="uni-middle-p">10</p>
+                </div>
+                <div class="col-02">
+                    <p class="hea uni"><strong>AMOUNT</strong></p>
+                    <p class="last-un">Rs.5000</p>
+                </div>
+            </div>
+
+            <div class="line"></div>
+
+            <div class="row inv-row">
+                <div class="col-01">
+                    <p>Product 02</p>
+                </div>
+                <div class="col-02">
+                    <p class="uni-middle-p">Rs.12000</p>
+                </div>
+                <div class="col-02">
+                    <p class="uni-middle-p">5</p>
+                </div>
+                <div class="col-02">
+                    <p class="last-un">Rs.30000</p>
+                </div>
+            </div>
+
+            <div class="row inv-row">
+                <div class="col-01">
+                    <p>Product 03</p>
+                </div>
+                <div class="col-02">
+                    <p class="uni-middle-p">Rs.9000</p>
+                </div>
+                <div class="col-02">
+                    <p class="uni-middle-p">15</p>
+                </div>
+                <div class="col-02">
+                    <p class="last-un">Rs.70000</p>
+                </div>
+            </div>
+
+            <div class="row inv-row">
+                <div class="col-01">
+                    <p>Product 04</p>
+                </div>
+                <div class="col-02">
+                    <p class="uni-middle-p">Rs.15000</p>
+                </div>
+                <div class="col-02">
+                    <p class="uni-middle-p">25</p>
+                </div>
+                <div class="col-02">
+                    <p class="last-un">Rs.100000</p>
+                </div>
+            </div>
+
+            <div class="row inv-row">
+                <div class="col-01">
+                    <p></p>
+                </div>
+                <div class="col-02">
+                    <p class="uni-middle-p">Subtotals</p>
+                </div>
+                <div class="col-02">
+                    <p class="uni-middle-p"></p>
+                </div>
+                <div class="col-02">
+                    <p class="last-un">Rs.500000</p>
+                </div>
+            </div>
+
+            <div class="row inv-row">
+                <div class="col-01">
+                    <p></p>
+                </div>
+                <div class="col-02">
+                    <p class="uni-middle-p">Discount</p>
+                </div>
+                <div class="col-02">
+                    <p class="uni-middle-p"></p>
+                </div>
+                <div class="col-02">
+                    <p class="last-un">Rs.300000</p>
+                </div>
+            </div>
+
+            <div class="row inv-row">
+                <div class="col-01">
+                    <p></p>
+                </div>
+                <div class="col-02">
+                    <p class="uni-middle-p">Tax</p>
+                </div>
+                <div class="col-02">
+                    <p class="uni-middle-p"></p>
+                </div>
+                <div class="col-02">
+                    <p class="last-un">Rs.100000</p>
+                </div>
+            </div>
+
+            <div class="row inv-row">
+                <div class="col-01">
+                    <p></p>
+                </div>
+                <div class="col-02">
+                    <p class="uni-middle-p">Total</p>
+                </div>
+                <div class="col-02">
+                    <p class="uni-middle-p"></p>
+                </div>
+                <div class="col-02">
+                    <p class="last-un">Rs.2000000</p>
+                </div>
+            </div>
+
+            <div class="row inv-row">
+                <div class="col-01">
+                    <p></p>
+                </div>
+                <div class="col-02">
+                    <p class="uni-middle-p">Deposit Requested</p>
+                </div>
+                <div class="col-02">
+                    <p class="uni-middle-p"></p>
+                </div>
+                <div class="col-02">
+                    <p class="last-un">Rs.1500000</p>
+                </div>
+            </div>
+
+            <div class="row inv-row">
+                <div class="col-01">
+                    <p></p>
+                </div>
+                <div class="col-02">
+                    <p class="uni-middle-p">Deposit Due</p>
+                </div>
+                <div class="col-02">
+                    <p class="uni-middle-p"></p>
+                </div>
+                <div class="col-02">
+                    <p class="last-un">Rs.3000000</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="signature-section">
+        <div class="sign">
+            <p>..........................................</p>
+            <p>Authorized Sign</p>
+        </div>
+    </section>
+
+    <section class="footer-section">
+        <div class="footer-sec">
+            <div class="row foot-row">
+                <div class="col-001">
+                    <p>Sonrich Asia (PVT) Ltd.</p>
+                </div>
+
+                <div class="col-002">
+                    <p><span>Phone No: </span>0117548222</p>
+                </div>
+            </div>
+
+            <div class="row foot-row te-cenetr">
+
+                <p><span>Email: </span>sonrich@gmail.com</p>
+            </div>
+        </div>
+    </section>
+
+</body>
+
+</html>
